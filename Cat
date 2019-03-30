@@ -1,0 +1,18 @@
+package com.z;
+
+public class Cat {
+	//属性由变量实现
+	int age;
+	String name ;
+	String color;
+	//行为方法实现
+	//方法 = 方法声明  = + 方法实现
+	void sayHello() {
+		System.out.println("喵喵喵喵喵喵喵喵喵喵");
+		
+	}	
+	int add(int a,int b) {
+		int c = a + b;
+		return c;
+	}
+}
