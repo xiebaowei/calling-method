@@ -1,0 +1,65 @@
+//Atm类
+package com.z;
+
+public class Atm {
+
+	 String  name;
+	 void fire(){
+		 System.out.println("大家好，我是"+name);
+		 System.out.println("我要开火");
+	 }
+	
+}
+
+
+//创建Shop类，创建方法，将Atm类作为sale方法的返回值
+package com.z;
+
+public class Shop {
+	
+	Atm sale(int money){
+		if(money>=100){
+			Atm atm = new Atm();
+			atm.name="奥特曼";
+			atm.fire();
+					
+			return atm;
+		}else{
+			return null;
+		}
+			
+	}
+}
+
+
+//WaiSheng类中把Atm类作为参数进行调用
+
+package com.z;
+
+public class WaiSheng {
+
+	String name;
+	void play(Atm atm){
+		System.out.println("我是"+name+"我要玩舅舅给我的玩具");
+		atm.name = "奥特曼之王";
+		atm.fire();
+	}
+}
+//创建对象，调用方法
+package com.z;
+
+public class Run {
+
+	public static void main(String[] args) {
+	
+		Shop wang = new Shop();
+		Atm dijiaAtm = wang.sale(100);
+		dijiaAtm.name = "迪迦";
+		dijiaAtm.fire();
+	WaiSheng han = new WaiSheng();
+	han.name= "晗晗";
+	han.play(dijiaAtm);
+	
+	}
+	
+}
