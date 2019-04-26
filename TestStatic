@@ -1,0 +1,28 @@
+package com.staticmethod;
+
+public class TestStatic {
+	
+
+	public static void main(String[] args) {
+		
+	StaticMethod zhangsan;
+	zhangsan = new StaticMethod();
+	System.out.println("构造方法被调用了");
+	zhangsan = new StaticMethod("张三", 20);
+	
+	//普通方法调用      对象名.方法名
+	zhangsan.sayHello();
+	zhangsan.add(1, 2);
+	
+	//静态方法调用      类名.静态方法名
+	StaticMethod.Method1();
+	
+	//普通属性      对象名.属性名
+	zhangsan.name = "张三";
+	
+	//静态属性    类名.属性名
+	StaticMethod.address = " 西安";
+    }
+
+	
+}
