@@ -1,0 +1,49 @@
+package com.staticmethod;
+
+public class StaticMethod {
+	//对象属性，成员变量
+	String name;
+	int age;
+	//静态属性，静态变量，类变量
+	static String address;
+	
+   StaticMethod() {
+	
+		System.out.println("调用无参构造方法");
+	}
+   StaticMethod(String name, int age) {
+		
+		this.name = name;
+		this.age = age;
+		
+		System.out.println("调用有参构造方法");
+	}	
+   static void Method1(){
+	  
+	   System.out.println("调用静态方法1");
+   }
+   
+   static void Method2(){
+	   //静态方法只能调用静态方法和静态属性
+	   
+	   Method1();
+	   address = "郑州";
+	   System.out.println("调用静态方法2");
+   }
+   
+	void sayHello(){
+		//普通方法什么都可以调用
+		Method1();
+		add(1,2);
+		name = "lisi";
+		address = " 成都";
+		System.out.println("调用普通方法");
+		System.out.println(name);
+	}
+
+	int add(int a,int b){
+		int sum = a+b;
+		return sum;
+		
+	}
+}
